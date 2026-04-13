@@ -522,6 +522,19 @@ footer strong{color:rgba(255,255,255,.6);display:block;margin-bottom:4px;}
   .arrow-change{flex-direction:column;align-items:flex-start;gap:6px;}
   .bot-intro{gap:14px;}
   .bot-avatar{width:56px;height:56px;font-size:26px;}
+ 
+  /* スマホ：セクション名の折り返し許可 */
+  .sec-name{white-space:normal;font-size:clamp(16px,4.5vw,20px);}
+  .sec-h2{font-size:clamp(18px,5vw,26px);}
+ 
+  /* スマホ：タグの折り返し許可 */
+  .pop-tag{white-space:normal;font-size:11px;padding:4px 10px;}
+ 
+  /* スマホ：セクションリード */
+  .sec-lead{font-size:13px;}
+ 
+  /* スマホ：アイコンと名前の縦並び整理 */
+  .sec-head{margin-bottom:24px;}
 }
  
 /* ─── STEP LIGHT BOX ─── */
@@ -530,6 +543,21 @@ footer strong{color:rgba(255,255,255,.6);display:block;margin-bottom:4px;}
   border:1px solid #e8e2d8;
   border-radius:14px;
   padding:clamp(22px,4vw,36px);
+}
+ 
+/* ─── SECTION TITLE ROW: 名前（左）＋年度ラベル（右） ─── */
+.sec-title-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.sec-kicker-right{
+  font-size:11px;font-weight:700;letter-spacing:.12em;
+  white-space:nowrap;flex-shrink:0;
+  opacity:.8;
 }
 </style>
 </head>
@@ -572,8 +600,10 @@ footer strong{color:rgba(255,255,255,.6);display:block;margin-bottom:4px;}
 <div class="section" id="s1">
   <div class="wrap">
     <div class="reveal">
-      <div class="sec-kicker" style="color:var(--s1);">① 令和8年度 改正ポイント</div>
-      <div class="pop-name pn1">キャリアアップ助成金</div>
+      <div class="sec-title-row">
+        <div class="pop-name pn1">キャリアアップ助成金</div>
+        <div class="sec-kicker-right" style="color:var(--s1);">① 令和8年度 改正ポイント</div>
+      </div>
       <div class="pop-tag pt1">✦ 今年から取れる加算が2つ新設！</div>
       <p class="sec-lead">正社員化コース・短時間労働者コースで新たな加算・区分が登場。要件を満たす事業所はぜひ申請を。</p>
     </div>
@@ -631,8 +661,10 @@ footer strong{color:rgba(255,255,255,.6);display:block;margin-bottom:4px;}
 <div class="section section-alt" id="s2">
   <div class="wrap">
     <div class="reveal">
-      <div class="sec-kicker" style="color:var(--s2);">② 令和8年度 改正ポイント</div>
-      <div class="pop-name pn2">両立支援等助成金</div>
+      <div class="sec-title-row">
+        <div class="pop-name pn2">両立支援等助成金</div>
+        <div class="sec-kicker-right" style="color:var(--s2);">② 令和8年度 改正ポイント</div>
+      </div>
       <div class="pop-tag pt2">✦ 新加算あり！要件も厳しくなりました</div>
       <p class="sec-lead">育休・介護・柔軟な働き方の各コースで改正。既存申請中の方も今すぐ確認を。</p>
     </div>
@@ -717,8 +749,10 @@ footer strong{color:rgba(255,255,255,.6);display:block;margin-bottom:4px;}
 <div class="section" id="s3">
   <div class="wrap">
     <div class="reveal">
-      <div class="sec-kicker" style="color:var(--s3);">③ 令和8年度 改正ポイント</div>
-      <div class="pop-name pn3">人材開発支援助成金</div>
+      <div class="sec-title-row">
+        <div class="pop-name pn3">人材開発支援助成金</div>
+        <div class="sec-kicker-right" style="color:var(--s3);">③ 令和8年度 改正ポイント</div>
+      </div>
       <div class="pop-tag pt3">✦ 設備費・代替要員費・45歳以上が新たに対象！</div>
       <p class="sec-lead">リスキリング支援を中心に大型の新設が相次いでいます。eラーニングの縮小にも早めの対応を。</p>
     </div>
