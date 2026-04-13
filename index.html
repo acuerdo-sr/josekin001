@@ -27,7 +27,7 @@
   --sh:      0 4px 24px rgba(11,24,41,.08);
   --sh-lg:   0 12px 40px rgba(11,24,41,.13);
 }
-
+ 
 /* ════ RESET ════ */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
@@ -37,30 +37,31 @@ body {
   line-height:1.75; -webkit-font-smoothing:antialiased;
 }
 a { color:inherit; text-decoration:none; }
-
+ 
 /* ════ NAV ════ */
 .nav {
   position:sticky; top:0; z-index:999;
-  height:50px;
+  height:64px;
   background:rgba(11,24,41,.97);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(232,192,96,.18);
   display:flex; align-items:center;
-  padding:0 clamp(16px,4vw,48px); gap:8px;
+  padding:0 clamp(16px,4vw,48px); gap:12px;
 }
 .nav-logo {
   font-family:'BIZ UDMincho', serif;
-  font-size:12px; letter-spacing:.05em;
+  font-size:18px; letter-spacing:.05em;
   color:var(--gold2); font-weight:700; white-space:nowrap; flex-shrink:0;
 }
-.nav-links { list-style:none; display:flex; gap:2px; margin-left:auto; }
+.nav-links { list-style:none; display:flex; gap:4px; margin-left:auto; }
 .nav-links a {
-  font-size:11px; padding:5px 11px; border-radius:40px;
-  color:rgba(255,255,255,.5); transition:background .15s, color .15s; white-space:nowrap;
+  font-size:15px; padding:8px 16px; border-radius:40px;
+  color:rgba(255,255,255,.7); transition:background .15s, color .15s; white-space:nowrap;
+  font-weight:500;
 }
 .nav-links a:hover { background:rgba(255,255,255,.08); color:#fff; }
 @media(max-width:640px){ .nav-links { display:none; } }
-
+ 
 /* ════ HERO ════ */
 .hero {
   background:var(--navy);
@@ -84,7 +85,7 @@ a { color:inherit; text-decoration:none; }
   background:radial-gradient(circle, rgba(196,154,46,.13) 0%, transparent 68%);
 }
 .hero-inner { max-width:800px; margin:0 auto; position:relative; }
-
+ 
 .hero-badge {
   display:inline-flex; align-items:center; gap:8px;
   background:rgba(232,192,96,.1); border:1px solid rgba(232,192,96,.32);
@@ -97,7 +98,7 @@ a { color:inherit; text-decoration:none; }
   animation:pulse 2.2s ease-in-out infinite;
 }
 @keyframes pulse{ 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.2;transform:scale(.65)} }
-
+ 
 .hero h1 {
   font-family:'BIZ UDMincho', serif;
   font-size:clamp(24px,5vw,46px);
@@ -127,12 +128,12 @@ a { color:inherit; text-decoration:none; }
   display:flex; align-items:center; justify-content:center;
   font-size:10px; font-weight:900; color:#fff; flex-shrink:0;
 }
-
+ 
 /* ════ LAYOUT ════ */
 .wrap { max-width:900px; margin:0 auto; padding:0 clamp(16px,4vw,48px); }
 .section      { padding:68px 0; }
 .section-alt  { background:var(--white); }
-
+ 
 /* ════ SECTION HEADER ════ */
 /* 助成金名：横一列・折り返しなし・通常サイズ */
 .sec-head { margin-bottom:36px; }
@@ -160,7 +161,7 @@ a { color:inherit; text-decoration:none; }
 .sn1 { color:var(--s1); }
 .sn2 { color:var(--s2); }
 .sn3 { color:var(--s3); }
-
+ 
 .sec-h2 {
   font-family:'BIZ UDMincho', serif;
   font-size:clamp(22px,4vw,34px);
@@ -174,7 +175,7 @@ a { color:inherit; text-decoration:none; }
 .r1 { background:linear-gradient(90deg, var(--s1) 0%, transparent 80%); }
 .r2 { background:linear-gradient(90deg, var(--s2) 0%, transparent 80%); }
 .r3 { background:linear-gradient(90deg, var(--s3) 0%, transparent 80%); }
-
+ 
 /* ════ BADGE ════ */
 .badge {
   display:inline-flex; align-items:center;
@@ -187,7 +188,7 @@ a { color:inherit; text-decoration:none; }
 .b-1    { background:rgba(21,82,160,.09); color:var(--s1); border:1px solid rgba(21,82,160,.22); }
 .b-2    { background:rgba(15,94,62,.09);  color:var(--s2); border:1px solid rgba(15,94,62,.22); }
 .b-3    { background:rgba(107,47,160,.09);color:var(--s3); border:1px solid rgba(107,47,160,.22); }
-
+ 
 /* ════ AMOUNT BLOCK (dark) ════ */
 .ablock {
   background:var(--navy);
@@ -214,7 +215,7 @@ a { color:inherit; text-decoration:none; }
   color:rgba(255,255,255,.82); line-height:1.4; margin-bottom:20px;
 }
 .ablock-title strong { color:var(--gold2); }
-
+ 
 /* Big number */
 .big-num {
   display:flex; align-items:flex-end; gap:0; flex-wrap:wrap;
@@ -232,7 +233,7 @@ a { color:inherit; text-decoration:none; }
   padding-bottom:clamp(6px,1.5vw,14px); padding-left:4px;
 }
 .big-caption { font-size:11px; color:rgba(255,255,255,.38); letter-spacing:.07em; margin-bottom:16px; }
-
+ 
 .ablock-sub {
   display:flex; flex-wrap:wrap; gap:20px;
   margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,.09);
@@ -253,7 +254,7 @@ a { color:inherit; text-decoration:none; }
   border-top:1px solid rgba(255,255,255,.08);
 }
 .ablock-desc strong { color:rgba(255,255,255,.82); }
-
+ 
 /* ════ CHANGE CARD (light) ════ */
 .ccard {
   background:var(--white); border:1px solid var(--border);
@@ -279,7 +280,7 @@ a { color:inherit; text-decoration:none; }
 }
 .ccard-body { font-size:clamp(12px,1.8vw,14px); color:var(--body); line-height:1.88; }
 .ccard-body strong { color:var(--ink); }
-
+ 
 /* Arrow comparison */
 .arrow {
   display:flex; align-items:center; gap:10px; flex-wrap:wrap;
@@ -293,7 +294,7 @@ a { color:inherit; text-decoration:none; }
   font-size:clamp(18px,3.5vw,26px); font-weight:700; line-height:1.1;
 }
 .an1 { color:var(--s1); } .an2 { color:var(--s2); } .an3 { color:var(--s3); }
-
+ 
 /* ════ CALLOUT ════ */
 .callout {
   border-radius:10px; padding:clamp(14px,2vw,18px) clamp(16px,2.5vw,22px);
@@ -308,11 +309,11 @@ a { color:inherit; text-decoration:none; }
 .cl-title { font-size:clamp(13px,2vw,14px); font-weight:700; color:var(--ink); margin-bottom:4px; }
 .cl-text  { font-size:clamp(12px,1.7vw,13px); color:var(--body); line-height:1.85; }
 .cl-text strong { color:var(--ink); }
-
+ 
 /* ════ GRID ════ */
 .g2 { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:16px; }
 .g3 { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap:14px; }
-
+ 
 /* Small cards within grid */
 .scard {
   background:var(--white); border:1px solid var(--border);
@@ -344,7 +345,7 @@ a { color:inherit; text-decoration:none; }
   font-size:clamp(22px,4vw,32px); font-weight:700; line-height:1;
 }
 .scard-note { font-size:11px; color:var(--muted); margin-top:3px; }
-
+ 
 /* ════ AI SECTION ════ */
 .ai-wrap {
   background:linear-gradient(155deg, #0d1f3a 0%, #18104a 55%, #0d1f3a 100%);
@@ -359,7 +360,7 @@ a { color:inherit; text-decoration:none; }
   content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
   background:linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold2) 60%, transparent);
 }
-
+ 
 /* Bot header */
 .bot-header {
   display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:24px;
@@ -382,7 +383,7 @@ a { color:inherit; text-decoration:none; }
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
 }
 .bot-sub { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.45); }
-
+ 
 /* Update badge */
 .upd-badge {
   display:inline-flex; align-items:center; gap:8px;
@@ -391,13 +392,13 @@ a { color:inherit; text-decoration:none; }
   font-size:12px; font-weight:700; color:#4ade80; margin-bottom:20px;
 }
 .udot { width:7px; height:7px; background:#4ade80; border-radius:50%; animation:pulse 2s infinite; box-shadow:0 0 6px rgba(74,222,128,.5); }
-
+ 
 .bot-desc {
   font-size:clamp(13px,1.9vw,15px); color:rgba(255,255,255,.5);
   line-height:1.88; max-width:540px; margin-bottom:28px;
 }
 .bot-desc strong { color:rgba(255,255,255,.78); }
-
+ 
 /* Update bar */
 .upd-bar {
   background:rgba(255,255,255,.05);
@@ -409,7 +410,7 @@ a { color:inherit; text-decoration:none; }
 .upd-bar-title { font-size:clamp(13px,2vw,15px); font-weight:700; color:#4ade80; margin-bottom:5px; }
 .upd-bar-text { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.5); line-height:1.85; }
 .upd-bar-text strong { color:rgba(255,255,255,.78); }
-
+ 
 /* AI feature cards */
 .ai-card {
   background:rgba(255,255,255,.05);
@@ -421,7 +422,7 @@ a { color:inherit; text-decoration:none; }
 .ai-icon { font-size:26px; margin-bottom:10px; }
 .ai-card h3 { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--white); margin-bottom:7px; }
 .ai-card p  { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.48); line-height:1.8; }
-
+ 
 /* Steps */
 .step-box {
   background:var(--navy); border-radius:14px;
@@ -445,7 +446,7 @@ a { color:inherit; text-decoration:none; }
 .step-t { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--white); margin-bottom:3px; }
 .step-d { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.45); line-height:1.75; }
 .step-d strong { color:rgba(255,255,255,.75); }
-
+ 
 /* Handoff */
 .handoff {
   background:rgba(196,154,46,.08); border:1px solid rgba(232,192,96,.25);
@@ -456,7 +457,7 @@ a { color:inherit; text-decoration:none; }
 .hoff-title { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--gold2); margin-bottom:5px; }
 .hoff-text { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.48); line-height:1.8; }
 .hoff-text strong { color:rgba(255,255,255,.75); }
-
+ 
 /* ════ FOOTER ════ */
 footer {
   background:#07111f; color:rgba(255,255,255,.3);
@@ -465,14 +466,14 @@ footer {
   border-top:1px solid rgba(232,192,96,.08);
 }
 footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
-
+ 
 /* ════ REVEAL ════ */
 .reveal {
   opacity:0; transform:translateY(20px);
   transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1);
 }
 .reveal.in { opacity:1; transform:none; }
-
+ 
 /* ════ MOBILE ════ */
 @media(max-width:480px){
   .section { padding:52px 0; }
@@ -485,7 +486,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-logo">アクエルド社会保険労務士法人</div>
@@ -496,8 +497,8 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
     <li><a href="#ai" style="color:#a8d0ff;">🤖 AI相談</a></li>
   </ul>
 </nav>
-
-
+ 
+ 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-glow"></div>
@@ -512,8 +513,8 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ═══════════════════════════════════
      ① キャリアアップ助成金
 ═══════════════════════════════════ -->
@@ -526,7 +527,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
       <p class="sec-lead">正社員化コース・短時間労働者コースで新たな加算・区分が登場。要件を満たす事業所はぜひ申請を。</p>
     </div>
     <div class="sec-rule r1"></div>
-
+ 
     <div class="ablock reveal">
       <div class="ablock-glow"></div>
       <div class="ablock-in">
@@ -540,7 +541,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="ablock-desc">「しょくばらぼ」または自社サイトに <strong>転換制度の概要・直近3年の実績数・転換までの期間</strong> を公表することが要件。大企業は＋15万円。</div>
       </div>
     </div>
-
+ 
     <div class="ablock reveal">
       <div class="ablock-glow"></div>
       <div class="ablock-in">
@@ -570,8 +571,8 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ═══════════════════════════════════
      ② 両立支援等助成金
 ═══════════════════════════════════ -->
@@ -584,7 +585,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
       <p class="sec-lead">育休・介護・柔軟な働き方の各コースで改正。既存申請中の方も今すぐ確認を。</p>
     </div>
     <div class="sec-rule r2"></div>
-
+ 
     <div class="ablock reveal">
       <div class="ablock-glow"></div>
       <div class="ablock-in">
@@ -595,7 +596,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="ablock-desc">公表が必要な3項目：<strong>①男性育休取得割合　②女性育休取得割合　③男女別平均取得日数</strong><br>「両立支援のひろば」への登録・掲載が必須。自社サイトだけでは加算されません。</div>
       </div>
     </div>
-
+ 
     <div class="ccard cc2 reveal">
       <div class="ccard-badges"><span class="badge b-chg">変更</span></div>
       <div class="ccard-title">「柔軟な働き方支援コース」— 必要な制度導入数が増えました</div>
@@ -611,7 +612,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         </div>
       </div>
     </div>
-
+ 
     <div class="g2 reveal">
       <div class="scard sc2">
         <div class="scard-badges"><span class="badge b-chg">変更</span></div>
@@ -635,7 +636,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <p>1日にまとめて数時間取っても1日カウント。<strong>5日間に分散</strong>して取得することが必須に。</p>
       </div>
     </div>
-
+ 
     <div class="callout cl-red reveal" style="margin-top:4px;">
       <span class="cl-icon">⚠️</span>
       <div>
@@ -645,8 +646,8 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ═══════════════════════════════════
      ③ 人材開発支援助成金
 ═══════════════════════════════════ -->
@@ -659,7 +660,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
       <p class="sec-lead">リスキリング支援を中心に大型の新設が相次いでいます。eラーニングの縮小にも早めの対応を。</p>
     </div>
     <div class="sec-rule r3"></div>
-
+ 
     <div class="ablock reveal">
       <div class="ablock-glow"></div>
       <div class="ablock-in">
@@ -684,7 +685,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="ablock-desc">認定経営革新等支援機関による<strong>事前の計画確認</strong>が必須。賃金要件等も充足が必要。まずはご相談ください。</div>
       </div>
     </div>
-
+ 
     <div class="g2 reveal">
       <div class="ccard cc3">
         <div class="ccard-badges"><span class="badge b-new">新設</span></div>
@@ -707,7 +708,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         </div>
       </div>
     </div>
-
+ 
     <div class="ccard cc3 reveal">
       <div class="ccard-badges"><span class="badge b-new">新設</span></div>
       <div class="ccard-title">45歳以上の社員のリスキリング費用が助成対象に</div>
@@ -717,7 +718,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">OJT実施助成（1人）</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:var(--s3);">10〜13<span style="font-size:.5em">万円</span></div></div>
       </div>
     </div>
-
+ 
     <div class="callout cl-purple reveal">
       <span class="cl-icon">📉</span>
       <div>
@@ -727,14 +728,14 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ═══════════════════════════════════
      AI ADVISOR
 ═══════════════════════════════════ -->
 <div class="ai-wrap" id="ai">
   <div class="wrap">
-
+ 
     <div class="bot-header reveal">
       <div class="bot-ava">🤖</div>
       <div>
@@ -742,7 +743,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="bot-sub">アクエルド社労士法人が監修。24時間・何度でも・無料でご利用いただけます。</div>
       </div>
     </div>
-
+ 
     <div class="reveal" style="margin-bottom:28px;">
       <div class="upd-badge"><span class="udot"></span>令和8年度（2026年度）最新情報に更新済み</div>
       <p class="bot-desc">
@@ -751,7 +752,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         そんな疑問にもその場でお答えします。<strong>難しい言葉は使いません</strong>、気軽にどうぞ！
       </p>
     </div>
-
+ 
     <div class="upd-bar reveal">
       <div class="upd-bar-icon">🔄</div>
       <div>
@@ -759,7 +760,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="upd-bar-text"><strong>キャリアアップ・両立支援・人材開発支援助成金</strong>の令和8年度改正ポイントをAIの知識に反映済み。「情報公表加算って？」「eラーニングの上限が変わったけど…」そのままご質問いただけます。</div>
       </div>
     </div>
-
+ 
     <div class="g3 reveal" style="margin:28px 0;">
       <div class="ai-card">
         <div class="ai-icon">💡</div>
@@ -777,7 +778,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <p>「何から始めればいい？」という段階からステップごとにサポートします。</p>
       </div>
     </div>
-
+ 
     <div class="step-box reveal">
       <div class="step-box-label">かんたん 3ステップ で使えます</div>
       <div class="steps">
@@ -795,7 +796,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         </div>
       </div>
     </div>
-
+ 
     <div class="handoff reveal">
       <div class="hoff-icon">🤝</div>
       <div>
@@ -803,11 +804,11 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
         <div class="hoff-text">AIとの会話の最後に <strong>「担当者に相談する」</strong> と入力するだけ。会話の内容が担当へ共有され、改めてChatworkルームでご連絡します。</div>
       </div>
     </div>
-
+ 
   </div>
 </div>
-
-
+ 
+ 
 <!-- FOOTER -->
 <footer>
   <strong>アクエルド社会保険労務士法人</strong>
@@ -815,7 +816,7 @@ footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
   最新の支給要領・申請要件は必ず各省庁・ハローワーク等の公式情報でご確認ください。助成金の受給を保証するものではありません。<br><br>
   © 2026 アクエルド社会保険労務士法人. All rights reserved.
 </footer>
-
+ 
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
@@ -824,3 +825,4 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
+ 
