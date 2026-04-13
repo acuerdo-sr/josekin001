@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>令和8年度 3大助成金 最新改正情報 | アクエルド社会保険労務士法人</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=BIZ+UDMincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════
+   TOKENS
+════════════════════════════════ */
+:root{
+  --navy:    #0b1829;
+  --navy2:   #142238;
+  --gold:    #c49a2e;
+  --gold2:   #e8c060;
+  --white:   #ffffff;
+  --off:     #f6f4ef;
+  --border:  #e2ddd4;
+  --ink:     #18182a;
+  --body:    #4a5568;
+  --muted:   #8a93a3;
+  --s1:      #1552a0;
+  --s2:      #0f5e3e;
+  --s3:      #6b2fa0;
+  --r:       12px;
+  --sh:      0 4px 24px rgba(11,24,41,.08);
+  --sh-lg:   0 12px 40px rgba(11,24,41,.13);
+}
+
+/* ════ RESET ════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  font-family:'Noto Sans JP', sans-serif;
+  background:var(--off); color:var(--ink);
+  line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+a { color:inherit; text-decoration:none; }
+
+/* ════ NAV ════ */
+.nav {
+  position:sticky; top:0; z-index:999;
+  height:50px;
+  background:rgba(11,24,41,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(232,192,96,.18);
+  display:flex; align-items:center;
+  padding:0 clamp(16px,4vw,48px); gap:8px;
+}
+.nav-logo {
+  font-family:'BIZ UDMincho', serif;
+  font-size:12px; letter-spacing:.05em;
+  color:var(--gold2); font-weight:700; white-space:nowrap; flex-shrink:0;
+}
+.nav-links { list-style:none; display:flex; gap:2px; margin-left:auto; }
+.nav-links a {
+  font-size:11px; padding:5px 11px; border-radius:40px;
+  color:rgba(255,255,255,.5); transition:background .15s, color .15s; white-space:nowrap;
+}
+.nav-links a:hover { background:rgba(255,255,255,.08); color:#fff; }
+@media(max-width:640px){ .nav-links { display:none; } }
+
+/* ════ HERO ════ */
+.hero {
+  background:var(--navy);
+  padding:56px clamp(20px,5vw,72px) 60px;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(232,192,96,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,192,96,.035) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+.hero::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold2) 60%, transparent);
+}
+.hero-glow {
+  position:absolute; pointer-events:none; border-radius:50%;
+  width:480px; height:480px; top:-180px; right:-80px;
+  background:radial-gradient(circle, rgba(196,154,46,.13) 0%, transparent 68%);
+}
+.hero-inner { max-width:800px; margin:0 auto; position:relative; }
+
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(232,192,96,.1); border:1px solid rgba(232,192,96,.32);
+  border-radius:4px; padding:5px 14px;
+  font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--gold2); margin-bottom:22px;
+}
+.pulse {
+  width:6px; height:6px; background:var(--gold2); border-radius:50%;
+  animation:pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse{ 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.2;transform:scale(.65)} }
+
+.hero h1 {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(24px,5vw,46px);
+  color:var(--white); line-height:1.2; letter-spacing:.02em; margin-bottom:16px;
+}
+.hero h1 .hl {
+  background:linear-gradient(90deg, var(--gold), var(--gold2));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.hero-desc {
+  font-size:clamp(13px,2vw,15px); color:rgba(255,255,255,.48);
+  line-height:1.9; max-width:520px; margin-bottom:32px;
+}
+.hero-pills { display:flex; flex-wrap:wrap; gap:10px; }
+.pill {
+  display:flex; align-items:center; gap:8px;
+  border-radius:8px; padding:9px 16px;
+  font-size:12px; font-weight:700; border:1px solid;
+  transition:transform .15s, box-shadow .15s;
+}
+.pill:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.28); }
+.p1 { background:rgba(21,82,160,.2); border-color:rgba(21,82,160,.45); color:#9bc8ff; }
+.p2 { background:rgba(15,94,62,.2);  border-color:rgba(15,94,62,.45);  color:#80ddb4; }
+.p3 { background:rgba(107,47,160,.2);border-color:rgba(107,47,160,.45);color:#d4a4f8; }
+.pill-n {
+  width:20px; height:20px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:900; color:#fff; flex-shrink:0;
+}
+
+/* ════ LAYOUT ════ */
+.wrap { max-width:900px; margin:0 auto; padding:0 clamp(16px,4vw,48px); }
+.section      { padding:68px 0; }
+.section-alt  { background:var(--white); }
+
+/* ════ SECTION HEADER ════ */
+/* 助成金名：横一列・折り返しなし・通常サイズ */
+.sec-head { margin-bottom:36px; }
+.sec-eyebrow {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:12px;
+}
+.sec-eyebrow::before {
+  content:''; display:block; width:24px; height:2px; border-radius:1px; background:currentColor;
+}
+/* 助成金名 — 通常サイズ・1行・アクセントカラー */
+.sec-name {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(18px,3vw,24px);
+  font-weight:700; white-space:nowrap; line-height:1.2;
+  margin-bottom:10px;
+  display:flex; align-items:center; gap:10px;
+}
+.sec-name::before {
+  content:''; display:inline-block;
+  width:4px; height:1.2em; border-radius:2px; flex-shrink:0;
+  background:currentColor;
+}
+.sn1 { color:var(--s1); }
+.sn2 { color:var(--s2); }
+.sn3 { color:var(--s3); }
+
+.sec-h2 {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(22px,4vw,34px);
+  font-weight:700; color:var(--ink); line-height:1.25; margin-bottom:10px;
+}
+.sec-lead {
+  font-size:clamp(13px,1.8vw,15px); color:var(--body);
+  line-height:1.9; max-width:560px; margin-bottom:0;
+}
+.sec-rule { height:2px; border-radius:1px; margin:28px 0 40px; }
+.r1 { background:linear-gradient(90deg, var(--s1) 0%, transparent 80%); }
+.r2 { background:linear-gradient(90deg, var(--s2) 0%, transparent 80%); }
+.r3 { background:linear-gradient(90deg, var(--s3) 0%, transparent 80%); }
+
+/* ════ BADGE ════ */
+.badge {
+  display:inline-flex; align-items:center;
+  font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  padding:3px 9px; border-radius:3px; flex-shrink:0;
+}
+.b-new  { background:#b83228; color:#fff; }
+.b-chg  { background:#0f5e3e; color:#fff; }
+.b-hot  { background:var(--navy); color:var(--gold2); }
+.b-1    { background:rgba(21,82,160,.09); color:var(--s1); border:1px solid rgba(21,82,160,.22); }
+.b-2    { background:rgba(15,94,62,.09);  color:var(--s2); border:1px solid rgba(15,94,62,.22); }
+.b-3    { background:rgba(107,47,160,.09);color:var(--s3); border:1px solid rgba(107,47,160,.22); }
+
+/* ════ AMOUNT BLOCK (dark) ════ */
+.ablock {
+  background:var(--navy);
+  border-radius:16px; padding:clamp(24px,4vw,44px);
+  position:relative; overflow:hidden; margin-bottom:20px;
+}
+.ablock::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(232,192,96,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,192,96,.035) 1px, transparent 1px);
+  background-size:28px 28px;
+}
+.ablock-glow {
+  position:absolute; top:-50px; right:-50px;
+  width:300px; height:300px; border-radius:50%; pointer-events:none;
+  background:radial-gradient(circle, rgba(196,154,46,.16) 0%, transparent 65%);
+}
+.ablock-in { position:relative; }
+.ablock-badges { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
+.ablock-title {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(15px,2.5vw,20px);
+  color:rgba(255,255,255,.82); line-height:1.4; margin-bottom:20px;
+}
+.ablock-title strong { color:var(--gold2); }
+
+/* Big number */
+.big-num {
+  display:flex; align-items:flex-end; gap:0; flex-wrap:wrap;
+  line-height:1; margin-bottom:4px;
+}
+.big-n {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(56px,13vw,100px); font-weight:700; letter-spacing:-.02em;
+  background:linear-gradient(130deg, var(--gold) 0%, var(--gold2) 55%, #fff9e0 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.big-u {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(22px,4vw,40px); color:var(--gold2); font-weight:700;
+  padding-bottom:clamp(6px,1.5vw,14px); padding-left:4px;
+}
+.big-caption { font-size:11px; color:rgba(255,255,255,.38); letter-spacing:.07em; margin-bottom:16px; }
+
+.ablock-sub {
+  display:flex; flex-wrap:wrap; gap:20px;
+  margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,.09);
+}
+.asub-item {}
+.asub-label { font-size:11px; color:rgba(255,255,255,.38); letter-spacing:.05em; margin-bottom:5px; }
+.asub-val {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(26px,5vw,44px); font-weight:700; line-height:1;
+  background:linear-gradient(130deg, var(--gold), var(--gold2));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.asub-unit { font-family:'BIZ UDMincho', serif; font-size:clamp(14px,2.5vw,20px); color:var(--gold2); margin-left:2px; }
+.asub-note { font-size:11px; color:rgba(255,255,255,.32); margin-top:3px; }
+.ablock-desc {
+  font-size:clamp(12px,1.7vw,14px); color:rgba(255,255,255,.5);
+  line-height:1.85; margin-top:18px; padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.ablock-desc strong { color:rgba(255,255,255,.82); }
+
+/* ════ CHANGE CARD (light) ════ */
+.ccard {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:var(--r); padding:clamp(20px,3vw,32px);
+  position:relative; overflow:hidden; margin-bottom:16px;
+  transition:box-shadow .2s, transform .2s;
+}
+.section-alt .ccard { background:var(--off); }
+.ccard:hover { box-shadow:var(--sh-lg); transform:translateY(-2px); }
+.ccard::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  border-radius:var(--r) var(--r) 0 0;
+}
+.cc1::before { background:var(--s1); }
+.cc2::before { background:var(--s2); }
+.cc3::before { background:var(--s3); }
+.cc-gold::before { background:var(--gold); }
+.ccard-badges { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
+.ccard-title {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(15px,2.5vw,18px); font-weight:700; color:var(--ink);
+  line-height:1.4; margin-bottom:10px;
+}
+.ccard-body { font-size:clamp(12px,1.8vw,14px); color:var(--body); line-height:1.88; }
+.ccard-body strong { color:var(--ink); }
+
+/* Arrow comparison */
+.arrow {
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  background:var(--off); border-radius:8px; padding:14px 18px; margin-top:14px;
+}
+.section-alt .arrow { background:var(--white); }
+.arrow-old { font-size:clamp(12px,2vw,14px); color:var(--muted); text-decoration:line-through; }
+.arrow-icon { font-size:18px; color:var(--muted); flex-shrink:0; }
+.arrow-new {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(18px,3.5vw,26px); font-weight:700; line-height:1.1;
+}
+.an1 { color:var(--s1); } .an2 { color:var(--s2); } .an3 { color:var(--s3); }
+
+/* ════ CALLOUT ════ */
+.callout {
+  border-radius:10px; padding:clamp(14px,2vw,18px) clamp(16px,2.5vw,22px);
+  display:flex; gap:12px; align-items:flex-start; margin:16px 0;
+}
+.cl-warn   { background:#fffdf0; border:1px solid #e8ca68; border-left:4px solid var(--gold); }
+.cl-info   { background:#f0f6ff; border:1px solid #a8c8f0; border-left:4px solid var(--s1); }
+.cl-purple { background:#f8f4ff; border:1px solid #c8a0e8; border-left:4px solid var(--s3); }
+.cl-red    { background:#fff4f4; border:1px solid #eeaaaa; border-left:4px solid #b83228; }
+.cl-green  { background:#f0faf5; border:1px solid #88ccaa; border-left:4px solid var(--s2); }
+.cl-icon  { font-size:18px; line-height:1.65; flex-shrink:0; }
+.cl-title { font-size:clamp(13px,2vw,14px); font-weight:700; color:var(--ink); margin-bottom:4px; }
+.cl-text  { font-size:clamp(12px,1.7vw,13px); color:var(--body); line-height:1.85; }
+.cl-text strong { color:var(--ink); }
+
+/* ════ GRID ════ */
+.g2 { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:16px; }
+.g3 { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap:14px; }
+
+/* Small cards within grid */
+.scard {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:var(--r); padding:clamp(18px,3vw,26px);
+  position:relative; overflow:hidden;
+  transition:box-shadow .2s, transform .2s;
+}
+.section-alt .scard { background:var(--off); }
+.scard:hover { box-shadow:var(--sh); transform:translateY(-2px); }
+.scard::after {
+  content:''; position:absolute; left:0; top:0; bottom:0;
+  width:3px; border-radius:var(--r) 0 0 var(--r);
+}
+.sc1::after { background:var(--s1); }
+.sc2::after { background:var(--s2); }
+.sc3::after { background:var(--s3); }
+.sc-g::after { background:var(--gold); }
+.scard-badges { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:10px; }
+.scard h3 {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(14px,2.2vw,16px); font-weight:700; color:var(--ink);
+  line-height:1.4; margin-bottom:8px;
+}
+.scard p { font-size:clamp(12px,1.7vw,13px); color:var(--body); line-height:1.85; }
+.scard p strong { color:var(--ink); }
+.scard-num {
+  margin-top:14px; padding-top:12px; border-top:1px solid var(--border);
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(22px,4vw,32px); font-weight:700; line-height:1;
+}
+.scard-note { font-size:11px; color:var(--muted); margin-top:3px; }
+
+/* ════ AI SECTION ════ */
+.ai-wrap {
+  background:linear-gradient(155deg, #0d1f3a 0%, #18104a 55%, #0d1f3a 100%);
+  padding:68px 0; position:relative; overflow:hidden;
+}
+.ai-wrap::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:22px 22px;
+}
+.ai-wrap::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold2) 60%, transparent);
+}
+
+/* Bot header */
+.bot-header {
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:24px;
+}
+.bot-ava {
+  width:64px; height:64px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg, #3a8eff, #9060f8);
+  display:flex; align-items:center; justify-content:center; font-size:30px;
+  box-shadow:0 0 0 3px rgba(60,140,255,.25), 0 0 20px rgba(60,140,255,.25);
+  animation:bob 3.5s ease-in-out infinite;
+}
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+.bot-name {
+  font-family:'BIZ UDMincho', serif;
+  font-size:clamp(18px,3.5vw,26px); font-weight:700; color:var(--white);
+  line-height:1.2; margin-bottom:5px;
+}
+.bot-name span {
+  background:linear-gradient(90deg,#60b0ff,#b080ff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.bot-sub { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.45); }
+
+/* Update badge */
+.upd-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(74,222,128,.1); border:1.5px solid rgba(74,222,128,.35);
+  border-radius:30px; padding:6px 16px;
+  font-size:12px; font-weight:700; color:#4ade80; margin-bottom:20px;
+}
+.udot { width:7px; height:7px; background:#4ade80; border-radius:50%; animation:pulse 2s infinite; box-shadow:0 0 6px rgba(74,222,128,.5); }
+
+.bot-desc {
+  font-size:clamp(13px,1.9vw,15px); color:rgba(255,255,255,.5);
+  line-height:1.88; max-width:540px; margin-bottom:28px;
+}
+.bot-desc strong { color:rgba(255,255,255,.78); }
+
+/* Update bar */
+.upd-bar {
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(74,222,128,.2); border-left:4px solid #4ade80;
+  border-radius:10px; padding:clamp(16px,3vw,22px) clamp(18px,3vw,26px);
+  display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; margin-bottom:28px;
+}
+.upd-bar-icon { font-size:22px; flex-shrink:0; padding-top:1px; }
+.upd-bar-title { font-size:clamp(13px,2vw,15px); font-weight:700; color:#4ade80; margin-bottom:5px; }
+.upd-bar-text { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.5); line-height:1.85; }
+.upd-bar-text strong { color:rgba(255,255,255,.78); }
+
+/* AI feature cards */
+.ai-card {
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px; padding:clamp(18px,3vw,24px);
+  transition:background .2s, transform .2s;
+}
+.ai-card:hover { background:rgba(255,255,255,.09); transform:translateY(-2px); }
+.ai-icon { font-size:26px; margin-bottom:10px; }
+.ai-card h3 { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--white); margin-bottom:7px; }
+.ai-card p  { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.48); line-height:1.8; }
+
+/* Steps */
+.step-box {
+  background:var(--navy); border-radius:14px;
+  padding:clamp(22px,4vw,36px); margin-bottom:20px;
+  border:1px solid rgba(255,255,255,.06);
+}
+.step-box-label {
+  font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--gold2); margin-bottom:18px;
+}
+.steps { display:flex; flex-direction:column; gap:0; }
+.step { display:flex; align-items:flex-start; gap:14px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.06); }
+.step:last-child { border-bottom:none; }
+.step-n {
+  width:32px; height:32px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#3a8eff,#9060f8);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'BIZ UDMincho',serif; font-size:14px; font-weight:700; color:#fff;
+  box-shadow:0 2px 10px rgba(60,140,255,.3); margin-top:1px;
+}
+.step-t { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--white); margin-bottom:3px; }
+.step-d { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.45); line-height:1.75; }
+.step-d strong { color:rgba(255,255,255,.75); }
+
+/* Handoff */
+.handoff {
+  background:rgba(196,154,46,.08); border:1px solid rgba(232,192,96,.25);
+  border-radius:12px; padding:clamp(18px,3vw,24px) clamp(20px,3vw,28px);
+  display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap;
+}
+.hoff-icon { font-size:24px; flex-shrink:0; }
+.hoff-title { font-size:clamp(13px,2vw,15px); font-weight:700; color:var(--gold2); margin-bottom:5px; }
+.hoff-text { font-size:clamp(11px,1.7vw,13px); color:rgba(255,255,255,.48); line-height:1.8; }
+.hoff-text strong { color:rgba(255,255,255,.75); }
+
+/* ════ FOOTER ════ */
+footer {
+  background:#07111f; color:rgba(255,255,255,.3);
+  text-align:center; padding:28px clamp(16px,4vw,48px);
+  font-size:12px; line-height:2;
+  border-top:1px solid rgba(232,192,96,.08);
+}
+footer strong { color:rgba(255,255,255,.55); display:block; margin-bottom:4px; }
+
+/* ════ REVEAL ════ */
+.reveal {
+  opacity:0; transform:translateY(20px);
+  transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1);
+}
+.reveal.in { opacity:1; transform:none; }
+
+/* ════ MOBILE ════ */
+@media(max-width:480px){
+  .section { padding:52px 0; }
+  .ablock-sub { flex-direction:column; gap:14px; }
+  .arrow { flex-direction:column; align-items:flex-start; gap:6px; }
+  .bot-header { gap:14px; }
+  .bot-ava { width:52px; height:52px; font-size:24px; }
+  .g2, .g3 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">アクエルド社会保険労務士法人</div>
+  <ul class="nav-links">
+    <li><a href="#s1">① キャリアアップ</a></li>
+    <li><a href="#s2">② 両立支援</a></li>
+    <li><a href="#s3">③ 人材開発</a></li>
+    <li><a href="#ai" style="color:#a8d0ff;">🤖 AI相談</a></li>
+  </ul>
+</nav>
+
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="pulse"></span>令和8年度（2026年度）— 顧問先様向け</div>
+    <h1>3大助成金<br><span class="hl">最新改正情報</span></h1>
+    <p class="hero-desc">キャリアアップ・両立支援・人材開発支援の3大助成金が令和8年度に大きく改正。新設加算・引き上げられた上限額・使いやすくなった制度を厳選してお届けします。</p>
+    <div class="hero-pills">
+      <a href="#s1" class="pill p1"><span class="pill-n" style="background:var(--s1)">1</span>キャリアアップ助成金</a>
+      <a href="#s2" class="pill p2"><span class="pill-n" style="background:var(--s2)">2</span>両立支援等助成金</a>
+      <a href="#s3" class="pill p3"><span class="pill-n" style="background:var(--s3)">3</span>人材開発支援助成金</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     ① キャリアアップ助成金
+═══════════════════════════════════ -->
+<div class="section" id="s1">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">① 令和8年度 改正ポイント</div>
+      <div class="sec-name sn1">キャリアアップ助成金</div>
+      <div class="sec-h2">今年から取れる加算が<br>2つ新設されました</div>
+      <p class="sec-lead">正社員化コース・短時間労働者コースで新たな加算・区分が登場。要件を満たす事業所はぜひ申請を。</p>
+    </div>
+    <div class="sec-rule r1"></div>
+
+    <div class="ablock reveal">
+      <div class="ablock-glow"></div>
+      <div class="ablock-in">
+        <div class="ablock-badges">
+          <span class="badge b-new">新設</span>
+          <span class="badge b-1">正社員化コース</span>
+        </div>
+        <div class="ablock-title">正規雇用転換の実績を<strong>公表するだけで</strong>加算が受けられます</div>
+        <div class="big-num"><span class="big-n">20</span><span class="big-u">万円</span></div>
+        <div class="big-caption">中小企業｜1事業所1回限り</div>
+        <div class="ablock-desc">「しょくばらぼ」または自社サイトに <strong>転換制度の概要・直近3年の実績数・転換までの期間</strong> を公表することが要件。大企業は＋15万円。</div>
+      </div>
+    </div>
+
+    <div class="ablock reveal">
+      <div class="ablock-glow"></div>
+      <div class="ablock-in">
+        <div class="ablock-badges">
+          <span class="badge b-new">新設</span>
+          <span class="badge b-1">短時間労働者コース</span>
+        </div>
+        <div class="ablock-title"><strong>従業員30人以下</strong>の事業所は合計最大でこの金額が受け取れます</div>
+        <div class="big-num"><span class="big-n">75</span><span class="big-u">万円</span></div>
+        <div class="big-caption">小規模企業（常時30人以下）｜1年目＋2年目合計</div>
+        <div class="ablock-sub">
+          <div class="asub-item">
+            <div class="asub-label">1年目（最大）</div>
+            <div><span class="asub-val">50</span><span class="asub-unit">万円</span></div>
+          </div>
+          <div class="asub-item">
+            <div class="asub-label">2年目（新設）</div>
+            <div><span class="asub-val">25</span><span class="asub-unit">万円</span></div>
+          </div>
+          <div class="asub-item">
+            <div class="asub-label">中小企業 合計</div>
+            <div><span class="asub-val" style="opacity:.55;font-size:clamp(20px,4vw,36px);">60</span><span class="asub-unit" style="opacity:.55;font-size:clamp(13px,2vw,17px);">万円</span></div>
+          </div>
+        </div>
+        <div class="ablock-desc">2年目は ①週2時間以上の労働時間延長、②基本給5%以上増額、③昇給・賞与・退職金制度の新規適用 のいずれかが必要。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     ② 両立支援等助成金
+═══════════════════════════════════ -->
+<div class="section section-alt" id="s2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">② 令和8年度 改正ポイント</div>
+      <div class="sec-name sn2">両立支援等助成金</div>
+      <div class="sec-h2">新しい加算が取れる一方、<br>要件が厳しくなっています</div>
+      <p class="sec-lead">育休・介護・柔軟な働き方の各コースで改正。既存申請中の方も今すぐ確認を。</p>
+    </div>
+    <div class="sec-rule r2"></div>
+
+    <div class="ablock reveal">
+      <div class="ablock-glow"></div>
+      <div class="ablock-in">
+        <div class="ablock-badges"><span class="badge b-new">新設</span></div>
+        <div class="ablock-title">育休取得率を <strong>「両立支援のひろば」に公表</strong> すると加算が受けられます</div>
+        <div style="font-family:'BIZ UDMincho',serif;font-size:clamp(22px,4vw,36px);font-weight:700;color:var(--gold2);line-height:1;margin-bottom:4px;">情報公表加算　新設</div>
+        <div class="big-caption">1事業主1回限り｜自社サイトのみは対象外</div>
+        <div class="ablock-desc">公表が必要な3項目：<strong>①男性育休取得割合　②女性育休取得割合　③男女別平均取得日数</strong><br>「両立支援のひろば」への登録・掲載が必須。自社サイトだけでは加算されません。</div>
+      </div>
+    </div>
+
+    <div class="ccard cc2 reveal">
+      <div class="ccard-badges"><span class="badge b-chg">変更</span></div>
+      <div class="ccard-title">「柔軟な働き方支援コース」— 必要な制度導入数が増えました</div>
+      <div class="ccard-body">受給に必要な制度導入数が引き上げ。自社の状況を今すぐ確認してください。</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px;">
+        <div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">20万円 受給するには</div>
+          <div class="arrow"><span class="arrow-old">2制度の導入</span><span class="arrow-icon">→</span><span class="arrow-new an2">3制度の導入が必要</span></div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">25万円 受給するには</div>
+          <div class="arrow"><span class="arrow-old">3制度以上の導入</span><span class="arrow-icon">→</span><span class="arrow-new an2">4制度以上の導入が必要</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="g2 reveal">
+      <div class="scard sc2">
+        <div class="scard-badges"><span class="badge b-chg">変更</span></div>
+        <h3>子の看護等休暇<br>「使った実績」が必要に</h3>
+        <p>規定整備だけでは不可。実際に<strong>10時間以上の利用実績</strong>がないと受給できません。</p>
+        <div class="scard-num" style="color:var(--s2)">10時間以上<div class="scard-note">の利用実績が必須</div></div>
+      </div>
+      <div class="scard sc2">
+        <div class="scard-badges"><span class="badge b-chg">変更</span><span class="badge b-new">拡大</span></div>
+        <h3>育休中等業務代替<br>大企業も申請できるように</h3>
+        <p>企業規模要件が撤廃。<strong>大企業も助成対象</strong>に拡大。ただし最大30万円の先行支給は廃止。</p>
+      </div>
+      <div class="scard sc2">
+        <div class="scard-badges"><span class="badge b-chg">変更</span></div>
+        <h3>介護コース<br>面談が3段階に厳格化</h3>
+        <p>「初回→プラン策定→フォロー」の<strong>3段階の面談</strong>が必須に。対象制度も5種類に絞られました。</p>
+      </div>
+      <div class="scard sc-g">
+        <div class="scard-badges"><span class="badge b-chg">変更</span></div>
+        <h3>不妊治療コース<br>5日間に「分けて」取得を</h3>
+        <p>1日にまとめて数時間取っても1日カウント。<strong>5日間に分散</strong>して取得することが必須に。</p>
+      </div>
+    </div>
+
+    <div class="callout cl-red reveal" style="margin-top:4px;">
+      <span class="cl-icon">⚠️</span>
+      <div>
+        <div class="cl-title">全コース共通：就業規則の「曖昧な規定」は支給対象外</div>
+        <div class="cl-text">「会社が認めた場合」「特別な事情がある場合」など裁量規定があると<strong>不支給</strong>に。就業規則を今すぐご確認ください。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     ③ 人材開発支援助成金
+═══════════════════════════════════ -->
+<div class="section" id="s3">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">③ 令和8年度 改正ポイント</div>
+      <div class="sec-name sn3">人材開発支援助成金</div>
+      <div class="sec-h2">設備費・代替要員費・45歳以上の<br>訓練費が新たに助成対象へ</div>
+      <p class="sec-lead">リスキリング支援を中心に大型の新設が相次いでいます。eラーニングの縮小にも早めの対応を。</p>
+    </div>
+    <div class="sec-rule r3"></div>
+
+    <div class="ablock reveal">
+      <div class="ablock-glow"></div>
+      <div class="ablock-in">
+        <div class="ablock-badges">
+          <span class="badge b-new">新設</span>
+          <span class="badge b-hot">中小企業限定</span>
+        </div>
+        <div class="ablock-title">新規事業向けの設備を導入すると<strong>導入費用の半額</strong>が返ってきます</div>
+        <div class="big-num"><span class="big-n">150</span><span class="big-u">万円</span></div>
+        <div class="big-caption">最大受給額（10人以上に訓練実施の場合）</div>
+        <div class="ablock-sub">
+          <div class="asub-item">
+            <div class="asub-label">加算率</div>
+            <div><span class="asub-val">50</span><span class="asub-unit">%</span></div>
+            <div class="asub-note">機器・設備導入費に対して</div>
+          </div>
+          <div class="asub-item">
+            <div class="asub-label">1人あたり上限</div>
+            <div><span class="asub-val">15</span><span class="asub-unit">万円</span></div>
+          </div>
+        </div>
+        <div class="ablock-desc">認定経営革新等支援機関による<strong>事前の計画確認</strong>が必須。賃金要件等も充足が必要。まずはご相談ください。</div>
+      </div>
+    </div>
+
+    <div class="g2 reveal">
+      <div class="ccard cc3">
+        <div class="ccard-badges"><span class="badge b-new">新設</span></div>
+        <div class="ccard-title">長期訓練休暇中の代替要員費用を助成</div>
+        <div class="ccard-body">代替要員を新規採用・派遣受入した場合に助成。休暇が長いほど受給額が増加します。</div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;">
+          <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">30日以上</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:var(--s3);">27<span style="font-size:.55em">万円</span></div></div>
+          <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">90日以上</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:var(--s3);">45<span style="font-size:.55em">万円</span></div></div>
+          <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">180日以上</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(22px,5vw,34px);font-weight:700;color:var(--s3);">67.5<span style="font-size:.5em">万円</span></div></div>
+        </div>
+      </div>
+      <div class="ccard cc3">
+        <div class="ccard-badges"><span class="badge b-chg">変更</span></div>
+        <div class="ccard-title">申請時期が最大2年半早くなりました</div>
+        <div class="ccard-body">教育訓練休暇制度の申請が大幅に前倒しに。早期に資金回収が可能に。</div>
+        <div class="arrow" style="margin-top:14px;">
+          <span class="arrow-old">計画期間終了後（最長3年後）</span>
+          <span class="arrow-icon">→</span>
+          <span class="arrow-new an3">導入から6か月後に申請可</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ccard cc3 reveal">
+      <div class="ccard-badges"><span class="badge b-new">新設</span></div>
+      <div class="ccard-title">45歳以上の社員のリスキリング費用が助成対象に</div>
+      <div class="ccard-body">訓練開始日時点で<strong>45歳以上</strong>の労働者を対象としたOJT＋Off-JT訓練が新設。ミドルシニアの配置転換・新規事業参入に活用できます。</div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+        <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">Off-JT経費補助率</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:var(--s3);">60〜75<span style="font-size:.5em">%</span></div></div>
+        <div><div style="font-size:11px;color:var(--muted);margin-bottom:4px;">OJT実施助成（1人）</div><div style="font-family:'BIZ UDMincho',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:var(--s3);">10〜13<span style="font-size:.5em">万円</span></div></div>
+      </div>
+    </div>
+
+    <div class="callout cl-purple reveal">
+      <span class="cl-icon">📉</span>
+      <div>
+        <div class="cl-title">eラーニング・通信制訓練の助成上限が大幅縮小</div>
+        <div class="cl-text">中小企業：<strong>30〜50万円 → 一律15万円</strong>に引き下げ（大企業：一律10万円）。eラーニング中心の訓練計画は早急に見直しが必要です。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     AI ADVISOR
+═══════════════════════════════════ -->
+<div class="ai-wrap" id="ai">
+  <div class="wrap">
+
+    <div class="bot-header reveal">
+      <div class="bot-ava">🤖</div>
+      <div>
+        <div class="bot-name"><span>助成金アドバイザーAI</span> がいます！</div>
+        <div class="bot-sub">アクエルド社労士法人が監修。24時間・何度でも・無料でご利用いただけます。</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom:28px;">
+      <div class="upd-badge"><span class="udot"></span>令和8年度（2026年度）最新情報に更新済み</div>
+      <p class="bot-desc">
+        「制度が変わったけど、うちは対象になる？」<br>
+        「この加算、どうやって申請するの？」<br>
+        そんな疑問にもその場でお答えします。<strong>難しい言葉は使いません</strong>、気軽にどうぞ！
+      </p>
+    </div>
+
+    <div class="upd-bar reveal">
+      <div class="upd-bar-icon">🔄</div>
+      <div>
+        <div class="upd-bar-title">このページの改正内容、全部AIに反映されています</div>
+        <div class="upd-bar-text"><strong>キャリアアップ・両立支援・人材開発支援助成金</strong>の令和8年度改正ポイントをAIの知識に反映済み。「情報公表加算って？」「eラーニングの上限が変わったけど…」そのままご質問いただけます。</div>
+      </div>
+    </div>
+
+    <div class="g3 reveal" style="margin:28px 0;">
+      <div class="ai-card">
+        <div class="ai-icon">💡</div>
+        <h3>御社向けの助成金を提案</h3>
+        <p>採用・研修・育児・介護…状況を話すと、使えそうな助成金を積極的に提案します。</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">📋</div>
+        <h3>要件と金額をわかりやすく解説</h3>
+        <p>支給要綱に基づいた正確な情報を、難しい言葉を使わずにお伝えします。</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">📝</div>
+        <h3>申請の準備ポイントをアドバイス</h3>
+        <p>「何から始めればいい？」という段階からステップごとにサポートします。</p>
+      </div>
+    </div>
+
+    <div class="step-box reveal">
+      <div class="step-box-label">かんたん 3ステップ で使えます</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div><div class="step-t">Chatworkで「相談」とメンション送信</div><div class="step-d">このルームの <strong>助成金相談AIボット</strong> 宛てに一言送るだけでOK</div></div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div><div class="step-t">自動返信されるリンクをクリック</div><div class="step-d">専用チャット画面がすぐに立ち上がります</div></div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div><div class="step-t">AIに話しかけてみてください！</div><div class="step-d"><strong>24時間・何度でも・無料</strong>でご相談いただけます</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="handoff reveal">
+      <div class="hoff-icon">🤝</div>
+      <div>
+        <div class="hoff-title">担当の社労士にそのまま引き継げます</div>
+        <div class="hoff-text">AIとの会話の最後に <strong>「担当者に相談する」</strong> と入力するだけ。会話の内容が担当へ共有され、改めてChatworkルームでご連絡します。</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <strong>アクエルド社会保険労務士法人</strong>
+  本ページは厚生労働省等の公開情報をもとに令和8年度の改正点を情報提供目的でまとめたものです。<br>
+  最新の支給要領・申請要件は必ず各省庁・ハローワーク等の公式情報でご確認ください。助成金の受給を保証するものではありません。<br><br>
+  © 2026 アクエルド社会保険労務士法人. All rights reserved.
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold:.07 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
